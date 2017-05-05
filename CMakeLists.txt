@@ -26,27 +26,32 @@ find_package(Qt5Sql)
 ## Define our source files
 set(CRUXLIB_SOURCE_FILES
 	${PROJECT_SOURCE_DIR}/Core/Is.hpp
+	${PROJECT_SOURCE_DIR}/Core/Config.hpp
 	${PROJECT_SOURCE_DIR}/Core/Request.hpp
 	${PROJECT_SOURCE_DIR}/Core/Container/Cookie.hpp
-		${PROJECT_SOURCE_DIR}/Provider/Sql/Driver.hpp
-		${PROJECT_SOURCE_DIR}/Provider/Sql/Engine.hpp
-			${PROJECT_SOURCE_DIR}/Provider/Sql/Dialect/Lite.hpp
-			${PROJECT_SOURCE_DIR}/Provider/Sql/Dialect/My.hpp
-			${PROJECT_SOURCE_DIR}/Provider/Sql/Dialect/Pg.hpp
-#				${PROJECT_SOURCE_DIR}/Fluent/Sql/Collection.hpp
-				${PROJECT_SOURCE_DIR}/Fluent/Sql/Model.hpp
-		${PROJECT_SOURCE_DIR}/Core/Request.cpp
-		${PROJECT_SOURCE_DIR}/Core/Container/Cookie.cpp
-		${PROJECT_SOURCE_DIR}/Provider/Sql/Driver.cpp
-			${PROJECT_SOURCE_DIR}/Provider/Sql/Engine.cpp
-				${PROJECT_SOURCE_DIR}/Provider/Sql/Dialect/Lite.cpp
-				${PROJECT_SOURCE_DIR}/Provider/Sql/Dialect/My.cpp
-				${PROJECT_SOURCE_DIR}/Provider/Sql/Dialect/Pg.cpp
-#					${PROJECT_SOURCE_DIR}/Fluent/Sql/Collection.cpp
-					${PROJECT_SOURCE_DIR}/Fluent/Sql/Model.cpp
-	${PROJECT_SOURCE_DIR}/Grammar/Inflection.cpp
+	${PROJECT_SOURCE_DIR}/Provider/Sql/Driver.hpp
+	${PROJECT_SOURCE_DIR}/Provider/Sql/Engine.hpp
+		${PROJECT_SOURCE_DIR}/Provider/Sql/Dialect/Lite.hpp
+		${PROJECT_SOURCE_DIR}/Provider/Sql/Dialect/My.hpp
+		${PROJECT_SOURCE_DIR}/Provider/Sql/Dialect/Pg.hpp
+#			${PROJECT_SOURCE_DIR}/Fluent/Sql/Collection.hpp
+			${PROJECT_SOURCE_DIR}/Fluent/Sql/Model.hpp
 	${PROJECT_SOURCE_DIR}/Grammar/Inflection.hpp
-		Crypto/OpenSSL.cpp Crypto/OpenSSL.hpp)
+	${PROJECT_SOURCE_DIR}/Crypto/OpenSSL.hpp
+
+	${PROJECT_SOURCE_DIR}/Core/Config.cpp
+	${PROJECT_SOURCE_DIR}/Core/Request.cpp
+	${PROJECT_SOURCE_DIR}/Core/Container/Cookie.cpp
+	${PROJECT_SOURCE_DIR}/Provider/Sql/Driver.cpp
+		${PROJECT_SOURCE_DIR}/Provider/Sql/Engine.cpp
+			${PROJECT_SOURCE_DIR}/Provider/Sql/Dialect/Lite.cpp
+			${PROJECT_SOURCE_DIR}/Provider/Sql/Dialect/My.cpp
+			${PROJECT_SOURCE_DIR}/Provider/Sql/Dialect/Pg.cpp
+#				${PROJECT_SOURCE_DIR}/Fluent/Sql/Collection.cpp
+				${PROJECT_SOURCE_DIR}/Fluent/Sql/Model.cpp
+	${PROJECT_SOURCE_DIR}/Grammar/Inflection.cpp
+	${PROJECT_SOURCE_DIR}/Crypto/OpenSSL.cpp
+)
 
 #######################################################################################################################
 ### Crux Shared Library Definition ####################################################################################
